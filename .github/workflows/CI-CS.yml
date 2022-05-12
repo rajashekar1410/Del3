@@ -46,7 +46,7 @@ jobs:
       run: |
             export RUNNER_ALLOW_RUNASROOT="1"
             export AGENT_ALLOW_RUNASROOT="1"
-            sudo echo "54.198.22.254 fortify.cyberxdemo.com" | sudo tee -a /etc/hosts
+            sudo echo "54.242.29.133 fortify.cyberxdemo.com" | sudo tee -a /etc/hosts
     - name: Perform SAST Scan
       run: scancentral -url ${SC_CONTROLLER_URL} start $BUILD_OPTS -upload -application $APPLICATION -version $VERSION -uptoken $SSC_UPLOAD_TOKEN
       env:                                            
